@@ -38,7 +38,7 @@ jobs:
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           repository: ${{ env.UNITY_ASSETS_REPO }}
           path: 'seer-unity-assets'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           fetch-depth: 1
 
       - name: 更新 seer-unity-assets
@@ -71,7 +71,7 @@ jobs:
         with:
           repository: ${{ env.CONFIG_SOURCE_REPO }}
           path: 'config-sources'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           fetch-depth: 1
 
       - name: 运行数据处理
