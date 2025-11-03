@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read, write
+  contents: [read, write]
 
 env:
   UNITY_ASSETS_REPO: 'SeerAPI/test123'
