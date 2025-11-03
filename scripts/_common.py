@@ -148,7 +148,7 @@ class DataRepoManager:
         
         try:
             print("⬆️  正在推送到远程仓库...")
-            
+            print(f"🔍 远程仓库列表：{self.repo.remotes}")
             # 获取远程仓库
             origin = self.repo.remotes[remote]
             
