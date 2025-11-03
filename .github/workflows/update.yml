@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
 env:
-  UNITY_ASSETS_REPO: 'SeerAPI/seer-unity-assets'
-  CONFIG_SOURCE_REPO: 'SeerAPI/config-sources'
+  UNITY_ASSETS_REPO: 'SeerAPI/test123'
+  CONFIG_SOURCE_REPO: 'SeerAPI/test456'
 
 jobs:
   update-unity-assets:
