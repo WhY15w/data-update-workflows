@@ -331,11 +331,6 @@ def main() -> None:
 	]
 	for name, platform in platforms:
 		print(f"🔍 正在检查 {name} 的更新...")
-		try:
-			print(f"当前版本：{platform.get_local_version()}")
-		except FileNotFoundError:
-			print(f"{platform.work_dir} 不存在")
-
 		remote_version = platform.get_remote_version()
 		if not platform.check_update():
 			print(f"{platform.work_dir} 已是最新版本")
