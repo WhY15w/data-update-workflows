@@ -323,6 +323,7 @@ class Unity(Platform):
 
 
 def main() -> None:
+	print(f"run test")
 	manager = DataRepoManager.from_checkout('.')
 	platforms: list[tuple[str, Platform]] = [
 		("flash", Flash(Path("flash"))),
