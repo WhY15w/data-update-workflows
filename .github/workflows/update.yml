@@ -38,7 +38,7 @@ jobs:
         uses: ./.github/actions/checkout-repo
         if: steps.check-update.outputs.need_update == 'true'
         with:
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-key: ${{ secrets.PAT }}
           repository: ${{ env.UNITY_ASSETS_REPO }}
           path: 'seer-unity-assets'
           token: ${{ secrets.PAT }}
