@@ -330,6 +330,7 @@ def main() -> None:
 		("unity", Unity(Path("unity"))),
 	]
 	for name, platform in platforms:
+		print(f"🔍 正在检查 {name} 的更新...")
 		try:
 			print(f"当前版本：{platform.get_local_version()}")
 		except FileNotFoundError:
