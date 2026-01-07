@@ -13,6 +13,7 @@ CONFIG = {
             "*art_ui_battleeffect*",
             "*art_ui_avatar*",
             "*art_ui_namecard*",
+            "*art_ui_common*",
             "*assets_art_ui_assets_pet_head*",
             "*assets_art_ui_assets_pet_body*",
             "*assets_art_ui_assets_archive*",
