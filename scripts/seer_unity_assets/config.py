@@ -19,6 +19,7 @@ CONFIG = {
             "*assets_art_ui_assets_archive*",
             "*assets_art_ui_assets_countermark*",
             "*assets_art_ui_assets_item*",
+            "*art_ui_item_cloth_prev*",
         ],
     },
 }
