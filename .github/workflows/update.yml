@@ -6,17 +6,16 @@ on:
 
   workflow_dispatch:
     inputs:
-      force-update-config:
-        type: boolean
-        description: "force-update-config"
-        required: false
-        default: false
       force-update-assets:
         type: boolean
         description: "force-update-assets"
         required: false
         default: false
-
+      force-update-config:
+        type: boolean
+        description: "force-update-config"
+        required: false
+        default: false
 env:
   UNITY_ASSETS_REPO: "SeerAPI/seer-unity-assets"
   CONFIG_SOURCE_REPO: "SeerAPI/config-sources"
@@ -64,7 +63,7 @@ jobs:
         if: ${{ steps.check-update.outputs.need_update == 'true' || inputs.force-update-assets }}
         run: |
           echo "🚀 开始处理数据..."
-          uv run update-seer-assets
+          uv run update-seer-assets ${{ inputs.force-update-assets && '--force' || '' }}
           echo "✅ 数据处理完成"
 
   update-config-sources:
