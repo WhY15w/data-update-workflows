@@ -32,6 +32,7 @@ async def process_package(
             updater_name,
             *update_args,
             manifest_path=get_manifest_path(package_name),
+            timeout=60.0,
             ignore_version=force,
         )
         await albi0.extract_assets(
