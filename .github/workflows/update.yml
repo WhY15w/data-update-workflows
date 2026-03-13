@@ -19,6 +19,7 @@ on:
 env:
   UNITY_ASSETS_REPO: "SeerAPI/seer-unity-assets"
   CONFIG_SOURCE_REPO: "SeerAPI/config-sources"
+  TQDM_MININTERVAL: 5
 
 permissions:
   contents: write
