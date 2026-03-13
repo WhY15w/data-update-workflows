@@ -5,7 +5,7 @@ description = ""
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "albi0>=0.5.0",
+    "albi0>=0.5.3",
     "gitpython>=3.1.45",
     "pytz>=2025.2",
     "solaris",
