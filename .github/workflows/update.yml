@@ -22,6 +22,7 @@ env:
   TQDM_MININTERVAL: 5
 
 permissions:
+  actions: write
   contents: write
 
 jobs:
@@ -31,6 +32,14 @@ jobs:
       has_update: ${{ steps.update.outputs.has_update }}
 
     steps:
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 30
+          keep_minimum_runs: 6
+
       - name: 检出脚本仓库
         uses: actions/checkout@v4
 
