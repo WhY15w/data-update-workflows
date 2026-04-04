@@ -12,6 +12,7 @@ CONFIG = {
             "*art_ui_pettype*",
             "*art_ui_battleeffect*",
             "*art_ui_avatar*",
+            "*art_ui_titlebg*",
             "*art_ui_namecard*",
             "*art_ui_common*",
             "*assets_art_ui_assets_pet_head*",
@@ -21,6 +22,10 @@ CONFIG = {
             "*assets_art_ui_assets_item*",
             "*art_ui_achieve*",
             "*art_ui_item_cloth_prev*",
+            "*art_ui_expression*",
+            "*art_autocard_texture_cards*",
+            "*art_autocard_texture_roles*",
+            "*art_autocard_texture_minipet*",
         ],
     },
 }
