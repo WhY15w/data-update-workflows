@@ -2,6 +2,7 @@ import asyncio
 import hashlib
 from itertools import chain
 import random
+import sys
 from typing import Any, TypeVar
 from abc import ABC, abstractmethod
 from pathlib import Path
@@ -319,7 +320,7 @@ class Unity(Platform):
         )
 
 
-async def run() -> None:
+async def run(*, force: bool = False) -> None:
     manager = DataRepoManager.from_checkout(".")
     platforms: list[tuple[str, Platform]] = [
         ("flash", Flash(Path("flash"))),
@@ -333,7 +334,7 @@ async def run() -> None:
             print(f"{platform.work_dir} 不存在")
 
         remote_version = platform.get_remote_version()
-        if not platform.check_update():
+        if not platform.check_update() and not force:
             print(f"{platform.work_dir} 已是最新版本")
             continue
 
@@ -350,4 +351,5 @@ async def run() -> None:
 
 
 def main() -> None:
-    asyncio.run(run())
+    force = "--force" in sys.argv
+    asyncio.run(run(force=force))

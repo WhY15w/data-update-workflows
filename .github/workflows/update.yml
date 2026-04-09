@@ -106,7 +106,7 @@ jobs:
         working-directory: ${{ steps.checkout-repo.outputs.repo-path }}
         run: |
           echo "🚀 开始处理数据..."
-          uv run update-config-sources
+          uv run update-config-sources ${{ inputs.force-update-config && '--force' || '' }}
           echo "✅ 数据处理完成"
 
       - name: Repository Dispatch
